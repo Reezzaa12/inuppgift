@@ -10,7 +10,7 @@ builder.Services.AddCors(policyBuilder =>
 var app = builder.Build();
 
 
-app.MapGet("/", () => "Individuell API");
+app.MapGet("/", () => "/(av)koda?text={dintext}");
 app.MapGet("/koda", (string text) => CaesarKodar(text));
 app.MapGet("/avkoda", (string text) => CaesarAvkoda(text));
 app.Run();
